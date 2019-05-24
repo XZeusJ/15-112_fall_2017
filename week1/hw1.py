@@ -53,18 +53,41 @@ def isRightTriangle(x1, y1, x2, y2, x3, y3):
 #     return 42
 
 def colorBlender(rgb1, rgb2, midpoints, n):
+    if midpoints< 0 or n <0 or n > midpoints+1:return None
+
     def splitrgb(rgb):
         r = rgb // 10**6
-        g = (rgb - r) // 10**3
-        b = rgb - r - g
+        g = (rgb - r*10**6) // 10**3
+        b = rgb - r*10**6 - g*10**3
         return r,g,b
+
+    
+    def getnth(a,b):
+        if a < b: 
+            return roundHalfUp(a + (b-a) / (midpoints+1) * n)
+        else: 
+            return roundHalfUp(a - (a-b) / (midpoints+1)*n)
 
     r1,g1,b1 = splitrgb(rgb1)
     r2,g2,b2 = splitrgb(rgb2)
 
-    return 42
+    r = getnth(r1,r2) 
+    g = getnth(g1,g2) 
+    b = getnth(b1,b2) 
+
+    return r*(10**6) + g*(10**3) + b
 
 def bonusFindIntRootsOfCubic(a, b, c, d):
+    p = -b/(3*a)
+    q = p**3 + (b*c-3*a*d)/(6*a**2)
+    r = c/(3*a)
+
+    x1 = (q + (q**2+(r-p**2)**3)**(1/2))**(1/3)+\
+        (q-(q**2+(r-p**2)**3)**(1/2))**(1/3)+p
+
+    x1 = int(x1.real)
+    # x2 = 
+
     return 42
 
 #################################################
