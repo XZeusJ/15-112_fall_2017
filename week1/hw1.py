@@ -86,7 +86,8 @@ def bonusFindIntRootsOfCubic(a, b, c, d):
         (q-(q**2+(r-p**2)**3)**(1/2))**(1/3)+p
 
     x1 = int(x1.real)
-    # x2 = 
+    
+    # x1 was solved, x2 and x3 not solved yet
 
     return 42
 

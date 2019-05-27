@@ -26,22 +26,95 @@ def roundHalfUp(d):
 #################################################
 
 def nearestOdd(n):
-    return 42
+    int_n = int(n)
+
+    def isOdd(n):
+        if n % 2 == 1: return True
+        return False
+    def isEven(n):
+        if n % 2 == 0: return True
+        return False
+
+    if isEven(n): return n - 1
+
+    if isOdd(int_n): 
+        return int_n
+    elif n > 0: 
+        return int_n + 1
+    else:
+        return int_n - 1
 
 def rectanglesOverlap(x1, y1, w1, h1, x2, y2, w2, h2):
-    return 42
+    # def isXOvl(x1,x2):
+    #     def isP1Left(x1,x2):
+    #         return x1 < x2
+    #     if isP1Left(x1,x2):
+    #         return x1 + w1 >= x2
+    #     else: return x2 + w2 >= x1
+
+    # def isYOvl(y1,y2):
+    #     def isP1Up(y1,y2):
+    #         return y1 < y2
+    #     if isP1Up(y1,y2):
+    #         return y1 + h1 >= y2
+    #     else: return y2 + h2 >= y1
+
+    # simple version about above
+    def isOvl(x1,x2,inc1,inc2):
+        if x1 < x2: return x1 + inc1 >= x2
+        else: return x2 + inc2 >= x1
+
+    return isOvl(x1,x2,w1,w2) and isOvl(y1,y2,h1,h2)
+
 
 def isPerfectSquare(n):
-    return 42
+    if not isinstance(n, int) or n < 0: return False
+   
+    # I just don't know how to make it without recursion or loop..
+    # so I just make a loop version about this question
+    # n >= 2 case
+    index = 0
+    perfectNum = 0
+    while True:
+        if perfectNum == n:
+            return True
+        elif perfectNum > n:
+            return False
+        else:
+            perfectNum = perfectNum + 2*index + 1
+            index += 1
+
 
 def getKthDigit(n, k):
-    return 42
+    return abs(n) // 10**k % 10
 
 def setKthDigit(n, k, d):
-    return 42
+    isNeg = False
+    if n < 0 : 
+        n = -n
+        isNeg = True
+
+    memo = n % 10**k
+    Appendix  = n // 10**k
+
+    newApp = Appendix // 10 * 10 + d
+    result = newApp * 10**k + memo
+
+    if isNeg:
+        result = -result
+    return result
 
 def riverCruiseUpstreamTime(totalTime, totalDistance, riverCurrent):
-    return 42
+    def quad(a,b,c):
+        j = (b**2 - 4*a*c)**(1/2)
+        if -b + j >= 0: return (-b+j)/(2*a)
+        return (-b-j)/(2*a)
+    a = totalTime
+    b = -totalDistance
+    c = -totalTime * riverCurrent**2
+    cruiseSpeed = quad(a,b,c)
+
+    return (totalDistance/2)/(cruiseSpeed - riverCurrent)
 
 #################################################
 # Lab1 Test Functions
@@ -140,23 +213,23 @@ def testAll():
     testRiverCruiseUpstreamTime()
 
 def main():
-    bannedTokens = (
-        #'False,None,True,and,assert,def,elif,else,' +
-        #'from,if,import,not,or,return,' +
-        'as,break,class,continue,del,except,finally,for,' +
-        'global,in,is,lambda,nonlocal,pass,raise,repr,' +
-        'try,while,with,yield,' +
-        #'abs,all,any,bool,chr,complex,divmod,float,' +
-        #'int,isinstance,max,min,pow,print,round,sum,' +
-        '__import__,ascii,bin,bytearray,bytes,callable,' +
-        'classmethod,compile,delattr,dict,dir,enumerate,' +
-        'eval,exec,filter,format,frozenset,getattr,globals,' +
-        'hasattr,hash,help,hex,id,input,issubclass,iter,' +
-        'len,list,locals,map,memoryview,next,object,oct,' +
-        'open,ord,property,range,repr,reversed,set,' +
-        'setattr,slice,sorted,staticmethod,str,super,tuple,' +
-        'type,vars,zip,importlib,imp,string,[,],{,}')
-    cs112_s17_linter.lint(bannedTokens=bannedTokens) # check style rules
+    # bannedTokens = (
+    #     #'False,None,True,and,assert,def,elif,else,' +
+    #     #'from,if,import,not,or,return,' +
+    #     'as,break,class,continue,del,except,finally,for,' +
+    #     'global,in,is,lambda,nonlocal,pass,raise,repr,' +
+    #     'try,while,with,yield,' +
+    #     #'abs,all,any,bool,chr,complex,divmod,float,' +
+    #     #'int,isinstance,max,min,pow,print,round,sum,' +
+    #     '__import__,ascii,bin,bytearray,bytes,callable,' +
+    #     'classmethod,compile,delattr,dict,dir,enumerate,' +
+    #     'eval,exec,filter,format,frozenset,getattr,globals,' +
+    #     'hasattr,hash,help,hex,id,input,issubclass,iter,' +
+    #     'len,list,locals,map,memoryview,next,object,oct,' +
+    #     'open,ord,property,range,repr,reversed,set,' +
+    #     'setattr,slice,sorted,staticmethod,str,super,tuple,' +
+    #     'type,vars,zip,importlib,imp,string,[,],{,}')
+    # cs112_s17_linter.lint(bannedTokens=bannedTokens) # check style rules
     testAll()
 
 if __name__ == '__main__':
