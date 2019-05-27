@@ -1,0 +1,55 @@
+check1.txt
+
+Edit this file and then submit it to autolab.
+
+Be sure to watch the videos very carefully, and not just
+skip ahead to the parts required to answer these questions!
+
+Be *very brief* in your answers!  Seriously.  Brief.
+
+---------------------------------------------------------------------
+
+1. Your full name:
+
+2. Your andrew id:
+
+3. Dates/times that you watched the videos listed in check1.html (fill this out as you go):
+
+4. Total time this check required (fill this out when you are done):
+
+5. Getting Started Video:
+
+5.1. In the video, how do I distinguish programming from computer science?
+
+5.2. Look through the Term Project Gallery and watch a few videos.  List here a project that you thought was compelling in some way, and briefly why:
+
+5.3. What were the two specific examples I used in the video that
+resulted in math.factorial generating errors?
+
+6. Functions Video:
+
+6.1. In the video, how do I define "dead code"?
+
+6.2. In the video, what did I do that resulted in Python printing this error message:  "TypeError: unsupported operand type9s) for *: 'NoneType' and 'int'"?
+
+6.3. In the video, how do I define "helper functions"?
+
+6.4. In the video, what is one reason I give for not using global variables?
+
+7. Data and Expressions Video
+
+7.1. What does pow(x,y) evaluate to?
+
+7.2. What is the difference between x/y and x//y?
+
+7.3. What do we mean by "Types affect semantics"?
+
+7.4. What is the difference between x//y and x%y?
+
+7.5. Why is it that printing ((0.1 + 0.1 + 0.1) == 0.3) prints False and not True?
+
+That's it.  We hope you had fun, learned a thing or two, and are now
+ready to dive in when we get going in earnest on Tuesday!
+
+Carpe diem!
+
