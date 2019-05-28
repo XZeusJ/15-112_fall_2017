@@ -1,0 +1,65 @@
+check3.txt
+
+Edit this file and then submit it to autolab.
+
+Be sure to watch the videos very carefully, and not just
+skip ahead to the parts required to answer these questions!
+
+Be *very brief* in your answers!  Seriously.  Brief.
+
+---------------------------------------------------------------------
+
+1. Your full name and andrew id:
+
+2. The full names and andrew id's of your groupmates.  Note that if you worked solo on this, then copy-paste the timestamp line from the email
+from the course instructor permitting you to do so.
+
+3. Dates/times that you watched the videos listed in check3.html (fill this out as you go):
+
+4. Total time this check required (fill this out when you are done):
+
+5. Strings questions (from the various String videos):
+
+5.1. Why is len('a\nb') equal to 3 and not 4?
+
+5.2. List a character that is easier to include in a string delimited by double-quotes rather than single-quotes.
+
+5.3. List each escape sequence mentioned in the video (like \n) and what they mean.
+
+5.4. What is type(string.digits)?  Why?
+
+5.5. For any string s where len(s)>1, is it definitely true that ((s[1:] in s) == True)?
+
+5.6. What is the empty string?  What is its type?  What is its length?
+
+5.7. What is "abcde"[-1]?
+
+5.8. What is 'abcde'[-1][-1]?  Briefly explain why that works, but 'abcde'[1][1] crashes.
+
+5.9. Briefly, why did we write the function reverseString in the video, rather than just using s[::-1] in our code?
+
+5.10. Briefly, what is the difference between split and splitlines?
+
+5.11. Please be sure to carefully watch the videos and take time
+to discuss and reflect on their content, and not just hurry through
+and answer all these questions.  The point of this check is not for
+you to answer the questions, but for you to learn the material.  So
+please take the time to learn the material well.  Ok?
+
+5.12. Of the first 4 ways we solve isPalindrome, which way do you think
+is the worst, and why so?
+
+5.12. What does it mean that Strings are immutable?
+
+5.13. What is the difference between a string method and a string function?
+
+5.14. What is the difference between chr and ord?
+
+5.15. What is the difference between lower and islower?
+
+5.16. How do you left-align text using the string formatting operator?
+
+5.17. Why does the Basic File IO example crash if you run it in the browser?
+
+That's it!  Carpe diem!
+

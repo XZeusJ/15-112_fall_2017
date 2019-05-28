@@ -1,0 +1,22 @@
+check5.txt
+
+Edit this file and then submit it to autolab.
+
+Be sure to watch the videos very carefully, and not just
+skip ahead to the parts required to answer these questions!
+
+Be *very brief* in your answers!  Seriously.  Brief.
+
+---------------------------------------------------------------------
+
+1. Your full name and andrew id:
+
+2. The full names and andrew id's of your groupmates.  Note that if you worked solo on this, then copy-paste the timestamp line from the email from the course instructor permitting you to do so.
+
+3. Dates/times that you watched the videos listed in check5.html (fill this out as you go):
+
+4. Total time this check required (fill this out when you are done):
+
+5. Your well-thought-out questions, and answers, one per assigned video.
+
+That's it!  Carpe diem!

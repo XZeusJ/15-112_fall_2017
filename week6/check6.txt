@@ -1,0 +1,14 @@
+
+check6.txt
+A Text file for the check6 submission.  This is just a text file,
+and not a Python file!  Edit this and submit it to autolab.
+
+1a. Your name:
+1b. Your andrew id:
+1c. The names and andrew id's of your groupmates:
+
+2. Notes from TP Gallery review:
+
+3. Notes from TP Blue-Sky discussion:
+
+
