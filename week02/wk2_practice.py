@@ -48,9 +48,6 @@ def hasConsecutiveDigits(n):
 def gcd(x, y):
     while y > 0:
         x,y = y, x%y
-        # oldX = x
-        # x = y
-        # y = oldX%y
     return x
 
 def pi(n):
@@ -66,19 +63,53 @@ def pi(n):
     return result
 
 def h(n):
-    return 42
+    result = 0
+    while (n > 0):
+        result += 1/n
+        n -= 1
+    return result
 
-def estimatedPi(n):
-    return 42
+# I don't understand what's the func means
+# and no information I can find about on the website.
+# def estimatedPi(n):
+#     print("pi",pi(n))
+#     return pi(n)
 
-def estimatedPiError(n):
-    return 42
+# def estimatedPiError(n):
+#     return 42
+
+def isPrime(n):
+    if n == 1 or n == 2: return True
+    for i in range(2,n):
+        if n % i == 0: return False
+    return True
+
+def nthPrime(n):
+    while (n > 0):
+        if isPrime(n)
+
+def isAdditivePrime(n):
+    return isPrime(n) and isPrime(sumOfDigits(n))
 
 def sumOfDigits(n):
-    return 42
+    n = abs(n)
+    total = 0
+    while (n > 0):
+        onesDigit = n%10
+        n //= 10
+        total += onesDigit
+    return total
 
 def nthAdditivePrime(n):
-    return 42
+    found = 0
+    guess = 0
+    while (found <= n):
+        guess += 1
+        print(isAdditivePrime(guess))
+        if (isAdditivePrime(guess)):
+            found += 1
+        break    
+    return guess
 
 def nthPerfectNumber(n):
     return 42
@@ -195,19 +226,19 @@ def testH():
     assert(almostEqual(h(3),1/1 + 1/2 + 1/3))  # h(3) = 1/1 + 1/2 + 1/3
     print('Passed.')
 
-def testEstimatedPi():
-    print('Testing estimatedPi()... ', end='')
-    assert(estimatedPi(100) == 27)
-    print('Passed.')
+# def testEstimatedPi():
+#     print('Testing estimatedPi()... ', end='')
+#     assert(estimatedPi(100) == 27)
+#     print('Passed.')
 
-def testEstimatedPiError():
-    print('Testing estimatedPi()... ', end='')
-    assert(estimatedPiError(100) == 2) # pi(100) = 25, estimatedPi(100) = 27
-    assert(estimatedPiError(200) == 0) # pi(200) = 46, estimatedPi(200) = 46
-    assert(estimatedPiError(300) == 1) # pi(300) = 62, estimatedPi(300) = 63
-    assert(estimatedPiError(400) == 1) # pi(400) = 78, estimatedPi(400) = 79
-    assert(estimatedPiError(500) == 1) # pi(500) = 95, estimatedPi(500) = 94
-    print('Passed.')
+# def testEstimatedPiError():
+#     print('Testing estimatedPi()... ', end='')
+#     assert(estimatedPiError(100) == 2) # pi(100) = 25, estimatedPi(100) = 27
+#     assert(estimatedPiError(200) == 0) # pi(200) = 46, estimatedPi(200) = 46
+#     assert(estimatedPiError(300) == 1) # pi(300) = 62, estimatedPi(300) = 63
+#     assert(estimatedPiError(400) == 1) # pi(400) = 78, estimatedPi(400) = 79
+#     assert(estimatedPiError(500) == 1) # pi(500) = 95, estimatedPi(500) = 94
+#     print('Passed.')
 
 def testNthPrime():
     print('Testing nthPrime()... ', end='')
