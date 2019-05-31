@@ -1,1 +1,11 @@
 http://www.kosbie.net/cmu/spring-17/15-112/schedule.html
+
+## About Grading
+Solo homeworks :: hw* --> 25%
+Midterm & Final Exam --> 20% for each
+Term Project --> 25%
+
+quizzes :: quiz* --> 10%
+
+col checks :: check* --> 1%
+col labs :: lab* --> 4%
