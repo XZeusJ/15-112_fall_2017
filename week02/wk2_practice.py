@@ -79,14 +79,20 @@ def h(n):
 #     return 42
 
 def isPrime(n):
-    if n == 1 or n == 2: return True
+    if n == 1: return False
+    if n == 2: return True
     for i in range(2,n):
         if n % i == 0: return False
     return True
 
 def nthPrime(n):
-    while (n > 0):
-        if isPrime(n)
+    found = 0
+    guess = 0
+    while (found <= n):
+        guess += 1
+        if (isPrime(guess)):
+            found += 1
+    return guess
 
 def isAdditivePrime(n):
     return isPrime(n) and isPrime(sumOfDigits(n))
@@ -105,21 +111,54 @@ def nthAdditivePrime(n):
     guess = 0
     while (found <= n):
         guess += 1
-        print(isAdditivePrime(guess))
         if (isAdditivePrime(guess)):
             found += 1
-        break    
     return guess
 
+def isPerfectNumber(n):
+    divisor = 1
+    total = 0
+    while (divisor <= n / 2):
+        if n % divisor == 0:
+            total += divisor
+        divisor += 1
+    return total == n
+
 def nthPerfectNumber(n):
-    return 42
+    found = 0
+    guess = 0
+    while (found <= n):
+        guess += 1
+        if (isPerfectNumber(guess)):
+            found += 1
+    return guess
 
 #################################################
 # Wed Recitation
 #################################################
 
 def longestDigitRun(n):
-    return 42
+    print("input n is:",n)
+    n = abs(n)
+    maxDigit = 0
+    maxCount = 0
+    count = 1
+
+    while (0 < n):
+        digit = n % 10
+        n //= 10
+
+        if (n  % 10 == digit):
+            count += 1
+        else:
+            if (maxCount < count):
+                maxCount = count
+                maxDigit = digit
+            elif (maxCount == count):
+                if maxDigit > digit:
+                    maxDigit = digit 
+            count = 1
+    return maxDigit
 
 def longestIncreasingRun(n):
     return 42
@@ -423,10 +462,10 @@ def testAll():
     testGcd()
     testPi()
     testH()
-    testEstimatedPi()
-    testEstimatedPiError()
+    # testEstimatedPi()
+    # testEstimatedPiError()
     testNthAdditivePrime()
-    testNthPerfectNumber() 
+    # testNthPerfectNumber() 
     testLongestDigitRun()
     testLongestIncreasingRun()
     testNthPalindromicPrime()
